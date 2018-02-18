@@ -9,6 +9,7 @@ import { ServersComponent } from './servers/servers.component';
 import {WarningComponent} from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import { ExercisesComponent } from './exercises/exercises.component';
+import { ExerciseDirectiveComponent } from './exercise-directive/exercise-directive.component';
 
 
 
@@ -19,7 +20,8 @@ import { ExercisesComponent } from './exercises/exercises.component';
     WarningComponent,
     ServersComponent,
     SuccessComponent,
-    ExercisesComponent
+    ExercisesComponent,
+    ExerciseDirectiveComponent
   ],
   imports: [
     BrowserModule,

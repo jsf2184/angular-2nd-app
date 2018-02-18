@@ -1,0 +1,27 @@
+<p>
+  exercise-directive works!
+</p>
+
+<div>
+  <!--<div style="text-align:center">-->
+  <br>
+  <br>
+
+  <button (click) = "onDisplayParagraphButtonClick()" class="btn btn-primary">
+    Display Details
+  </button>
+
+  <p *ngIf="displayParagraph">Here are the details of the paragraph. It is top secret </p>
+  <br>
+  <ul>
+    <li *ngFor="let v of buttonClicks"
+        [ngStyle] = "{backgroundColor : getElementBackgroundColor(v)}"
+        [ngClass] = "{'laterEntry': v >= 4}"
+    >
+      element {{v}}
+    </li>
+  </ul>
+  <br>
+
+
+</div>

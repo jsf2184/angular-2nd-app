@@ -9,16 +9,15 @@ import { Component } from '@angular/core';
       color: red;
     }
     .laterEntry {
-      /*background-color: blue;*/
       color: white;
     }
   `]
 })
 export class AppComponent {
   password = '';
-  displayParagraph = true;
   title = 'Greater Website';
   userName = 'Joe';
+  displayParagraph = true;
   buttonClicks = [];
 
   // onSetToJoeTimeout() {
