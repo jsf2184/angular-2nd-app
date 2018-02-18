@@ -11,10 +11,13 @@
 <button (click) = "onCreateServer()" class="btn btn-primary" [disabled]="!isNewServerAllowed()">
   Add Server
 </button>
-<p [innerText]="getAllowedString()"></p>
+<p *ngIf="serverCreateCount > 0; else noServer "> AddServer button press count: {{serverCreateCount}}</p>
+<ng-template  #noServer>
+  <p>No servers have been created at all</p>
+  <p>Seriously, not a single one</p>
+</ng-template>
 <!--<p> {{getAllowedString()}}</p>-->
 <!--<p>Hello there</p>-->
 <h3> Latest Server Name is: {{newServerName}} </h3>
-<p>{{getCreateCountString()}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<p>Does this print? </p>
+<app-server *ngFor="let server of servers"></app-server>

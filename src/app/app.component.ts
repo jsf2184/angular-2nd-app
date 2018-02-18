@@ -8,12 +8,18 @@ import { Component } from '@angular/core';
     p {
       color: red;
     }
+    .laterEntry {
+      /*background-color: blue;*/
+      color: white;
+    }
   `]
 })
 export class AppComponent {
   password = '';
+  displayParagraph = true;
   title = 'Greater Website';
   userName = 'Joe';
+  buttonClicks = [];
 
   // onSetToJoeTimeout() {
   //   this.userName = 'Joe';
@@ -31,6 +37,15 @@ export class AppComponent {
   isUserNameResetAllowed() {
     const res = this.userName.length > 0;
     return res;
+  }
+
+  onDisplayParagraphButtonClick() {
+    this.displayParagraph = !this.displayParagraph;
+    this.buttonClicks.push(this.buttonClicks.length + 1);
+  }
+
+  getElementBackgroundColor(v) {
+    return v >= 4 ? 'blue' : 'white';
   }
 
 }
